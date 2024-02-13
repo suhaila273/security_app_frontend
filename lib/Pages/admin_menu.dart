@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:security_app/Pages/add_security.dart';
+import 'package:security_app/Pages/view_security.dart';
 
 class AdminMenu extends StatelessWidget {
   const AdminMenu({super.key});
@@ -21,9 +22,9 @@ class AdminMenu extends StatelessWidget {
                   begin: Alignment.topLeft,
                   end: Alignment.bottomRight,
                   colors: [
-                    Color(0xFF009999).withOpacity(0.1),
                     Color(0xFF009999).withOpacity(0.3),
                     Color(0xFF009999).withOpacity(0.5),
+                    Color(0xE2000066).withOpacity(0.5),
                     //Color(0xFF000066)
                   ]
               )
@@ -43,10 +44,12 @@ class AdminMenu extends StatelessWidget {
                             borderRadius: BorderRadius.circular(10)
                         )
                     ),
-                    onPressed: (){},
+                    onPressed: (){
+                      Navigator.push(context, MaterialPageRoute(builder: (context)=>ViewSecurity()));
+                    },
                     child: Text("VIEW ALL SECURITY GUARDS")),
               ),
-              SizedBox(height: 35,),
+              SizedBox(height: 30,),
               SizedBox(
                 height: 130,
                 width: 250,
