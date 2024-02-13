@@ -1,8 +1,23 @@
 import 'dart:convert';
 import 'package:http/http.dart' as http;
+import 'package:security_app/Model/visitor_model.dart';
 
 class VisitorApiService
 {
+  Future<List<Visitor>> getVisitor() async{
+    var client= http.Client();
+    var apiUrl=Uri.parse("http://192.168.0.104:3001/api/visitor/viewall");
+    var response= await client.get(apiUrl);
+    if(response.statusCode==200)
+    {
+      return visitorFromJson(response.body);
+    }
+    else
+    {
+      return [];
+    }
+
+  }
   Future<dynamic> addVisitorApi(String securityId,String name,String address,String phone,String purpose) async
   {
     var client =http.Client();

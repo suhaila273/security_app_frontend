@@ -65,10 +65,9 @@ class _SecurityLoginState extends State<SecurityLogin> {
               children: [
                 SizedBox(height: 60,),
                 Text("Sign In here !",style: TextStyle(color: Colors.white,fontSize: 22),),
-                SizedBox(height: 50,),
+                SizedBox(height: 40,),
                Image.network(height: 180,"https://cdn-icons-png.freepik.com/512/8631/8631487.png"),
-                SizedBox(height: 50,),
-                SizedBox(width: 10,),
+                SizedBox(height: 40,),
                 TextField(
                   controller: email1,
                   style: TextStyle(color: Colors.white),
@@ -112,7 +111,24 @@ class _SecurityLoginState extends State<SecurityLogin> {
                       onPressed: SendValuesToApi,
                       child: Text("SIGN IN",style: TextStyle(fontWeight: FontWeight.bold),)),
                 ),
-                SizedBox(height: 155,),
+                SizedBox(height: 25,),
+                SizedBox(
+                  height: 45,
+                  width: 200,
+                  child: OutlinedButton(
+                      style: OutlinedButton.styleFrom(
+                          side: BorderSide(color: Color(0xFF009999)),
+                          foregroundColor: Color(0xFF009999),
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(10)
+                          )
+                      ),
+                      onPressed: (){
+                        Navigator.pop(context);
+                      },
+                      child: Text("GO BACK",style: TextStyle(fontWeight: FontWeight.bold),)),
+                ),
+                SizedBox(height: 105,),
 
               ],
             ),
