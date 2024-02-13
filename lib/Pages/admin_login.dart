@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:security_app/Pages/admin_menu.dart';
 
 class AdminLogin extends StatefulWidget {
   const AdminLogin({super.key});
@@ -14,6 +15,7 @@ class _AdminLoginState extends State<AdminLogin> {
   void checkCredential(){
     if(username.text == "admin" && password.text=="1234" ){
       print("successful login");
+      Navigator.push(context, MaterialPageRoute(builder: (context)=>AdminMenu()));
     }
     else{
       print("Incorrect username or password");
