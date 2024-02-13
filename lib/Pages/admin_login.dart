@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:security_app/Pages/admin_menu.dart';
+import 'package:security_app/Pages/security_login.dart';
 
 class AdminLogin extends StatefulWidget {
   const AdminLogin({super.key});
@@ -95,11 +96,13 @@ class _AdminLoginState extends State<AdminLogin> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Text("Sign in as Security Guard",style: TextStyle(color: Colors.white),),
-                  SizedBox(width: 20,),
-                  IconButton(onPressed: (){},
+                  Text("Sign in as Security Guard",style: TextStyle(color: Colors.white,fontSize: 15),),
+                  IconButton(onPressed: (){
+                    Navigator.push(context, MaterialPageRoute(builder: (context)=>SecurityLogin()));
+                  },
                       icon: Icon(Icons.lock_open_sharp,color: Colors.white,size: 32,)
                   ),
+
                 ],
               ),
              SizedBox(height: 55,)
