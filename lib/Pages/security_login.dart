@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:security_app/Pages/add_visitor.dart';
 import 'package:security_app/Service/security_service.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -23,7 +24,7 @@ class _SecurityLoginState extends State<SecurityLogin> {
       SharedPreferences preferences=await SharedPreferences.getInstance();
       preferences.setString("securityId", securityId);
       print("successfully login");
-      //Navigator.push(context, MaterialPageRoute(builder: (context)=>));
+      Navigator.push(context, MaterialPageRoute(builder: (context)=>AddVisitor()));
     }
     else if(response["status"]=="invalid email")
     {
