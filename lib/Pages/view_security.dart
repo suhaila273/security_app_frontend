@@ -39,12 +39,13 @@ class _ViewSecurityState extends State<ViewSecurity> {
                         child: Column(
                           children: [
                             ListTile(
-                              leading: CircleAvatar(
+                              trailing: CircleAvatar(
                                 radius: 27,
                                 backgroundColor: Color(0xFF000066),
                                 child: Text(snapshot.data![index].name[0],style: TextStyle(fontSize: 18,fontWeight: FontWeight.bold,color: Colors.white),),
                               ),
-                              title: Text(snapshot.data![index].name,style: TextStyle(fontSize: 19,fontWeight: FontWeight.bold,color: Color(0xFF000066)),
+                              title: Text(
+                                snapshot.data![index].name,style: TextStyle(fontSize: 19,fontWeight: FontWeight.bold,color: Color(0xFF000066)),
                               ),
                               subtitle: Text(snapshot.data![index].empid
                                 +"\n"+snapshot.data![index].email
