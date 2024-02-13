@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:security_app/Pages/add_security.dart';
 
 class AdminMenu extends StatelessWidget {
   const AdminMenu({super.key});
@@ -8,6 +9,8 @@ class AdminMenu extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
+          leading: IconButton(onPressed: (){Navigator.pop(context);},
+              icon: Icon(Icons.arrow_back_ios_new,color: Colors.white,)),
           title: Text("ADMIN MENU",style: TextStyle(color: Colors.white),),
           backgroundColor: Color(0xFF027A7A),
         ),
@@ -55,8 +58,10 @@ class AdminMenu extends StatelessWidget {
                             borderRadius: BorderRadius.circular(10)
                         )
                     ),
-                    onPressed: (){},
-                    child: Text("ADD SECURITY")),
+                    onPressed: (){
+                      Navigator.push(context, MaterialPageRoute(builder: (context)=>AddSecurity()));
+                    },
+                    child: Text("ADD SECURITY GUARD")),
               ),
               SizedBox(height: 35,),
               SizedBox(
