@@ -59,12 +59,13 @@ class _AdminLoginState extends State<AdminLogin> {
                   labelText: "Username",
                   hintText: "Enter admin username",
                     labelStyle: TextStyle(color: Colors.white),
+                    hintStyle: TextStyle(color: Colors.white),
                     enabledBorder: OutlineInputBorder(
                         borderSide: BorderSide(color: Colors.white)
                     )
                 ),
               ),
-              SizedBox(height: 35,),
+              SizedBox(height: 25,),
               TextField(
                 controller: password,
                 style: TextStyle(color: Colors.white),
@@ -72,6 +73,7 @@ class _AdminLoginState extends State<AdminLogin> {
                   labelText: "Password",
                   hintText: "Enter admin password",
                   labelStyle: TextStyle(color: Colors.white),
+                  hintStyle: TextStyle(color: Colors.white),
                   enabledBorder: OutlineInputBorder(
                     borderSide: BorderSide(color: Colors.white)
                   )

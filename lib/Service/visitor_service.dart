@@ -6,7 +6,7 @@ class VisitorApiService
 {
   Future<List<Visitor>> getVisitor() async{
     var client= http.Client();
-    var apiUrl=Uri.parse("http://192.168.0.104:3001/api/visitor/viewall");
+    var apiUrl=Uri.parse("http://172.16.185.203:3001/api/visitor/viewall");
     var response= await client.get(apiUrl);
     if(response.statusCode==200)
     {
@@ -21,7 +21,7 @@ class VisitorApiService
   Future<dynamic> addVisitorApi(String securityId,String name,String address,String phone,String purpose) async
   {
     var client =http.Client();
-    var apiUrl= Uri.parse("http://192.168.0.104:3001/api/visitor/add");
+    var apiUrl= Uri.parse("http://172.16.185.203:3001/api/visitor/add");
 
     var response =await client.post(apiUrl,
         headers: <String,String>{

@@ -8,7 +8,7 @@ class SecurityApiService
 {
   Future<dynamic> SecurityloginData(String email, String password) async {
     var client = http.Client();
-    var apiUrl = Uri.parse("http://192.168.0.104:3001/api/sec/login");
+    var apiUrl = Uri.parse("http://172.16.185.203:3001/api/sec/login");
 
     var response = await client.post(apiUrl,
         headers: <String, String>{
@@ -29,7 +29,7 @@ class SecurityApiService
 
   Future<List<Security>> getSecurityApi() async{
     var client= http.Client();
-    var apiUrl=Uri.parse("http://192.168.0.104:3001/api/sec/viewall");
+    var apiUrl=Uri.parse("http://172.16.185.203:3001/api/sec/viewall");
 
     var response= await client.get(apiUrl);
     if(response.statusCode==200)
@@ -46,7 +46,7 @@ class SecurityApiService
   Future<dynamic> addSecurityApi(String name,String empid,String address,String phno,String email,String password) async
   {
     var client =http.Client();
-    var apiUrl= Uri.parse("http://192.168.0.104:3001/api/sec/add");
+    var apiUrl= Uri.parse("http://172.16.185.203:3001/api/sec/add");
 
     var response =await client.post(apiUrl,
         headers: <String,String>{
