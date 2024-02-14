@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:security_app/Pages/admin_menu.dart';
 import 'package:security_app/Pages/security_login.dart';
 
@@ -44,7 +45,8 @@ class _AdminLoginState extends State<AdminLogin> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              SizedBox(height: 95,),
+              SizedBox(height: 75,),
+              SvgPicture.asset('assets/bg.svg',height: 150,width: 100,),
               Text("WELCOME !",style: TextStyle(fontSize: 22,color: Colors.white),),
               SizedBox(height: 50,),
               CircleAvatar(
@@ -69,6 +71,7 @@ class _AdminLoginState extends State<AdminLogin> {
               TextField(
                 controller: password,
                 style: TextStyle(color: Colors.white),
+                obscureText: true,
                 decoration: InputDecoration(
                   labelText: "Password",
                   hintText: "Enter admin password",
